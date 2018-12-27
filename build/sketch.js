@@ -149,7 +149,11 @@ function keyPressed()
         let result = engine.cipher(keyboardDisplay.pressedKey)
         if(result)
         {
-if(document.getElementById('plaintext') == null)
+if(document.getElementById('plaintext').value)
+{
+    alert("document.getElementById('plaintext') != null");
+}
+else
 {
     alert("document.getElementById('plaintext') == null");
 }
