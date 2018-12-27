@@ -149,13 +149,15 @@ function keyPressed()
         let result = engine.cipher(keyboardDisplay.pressedKey)
         if(result)
         {
-if(document.getElementById('plaintext').value)
+if(document.getElementById('plaintext') == null)
 {
-    alert("document.getElementById('plaintext') != null");
+    //alert("document.getElementById('plaintext') != null");
+    outputText = "document.getElementById('plaintext') == null";
 }
 else
 {
-    alert("document.getElementById('plaintext') == null");
+    //alert("document.getElementById('plaintext') == null");
+    outputText = "document.getElementById('plaintext') != null";
 }
 
             document.getElementById('plaintext').value = document.getElementById('plaintext').value + keyboardDisplay.pressedKey;
